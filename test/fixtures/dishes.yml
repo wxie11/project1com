@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 veg_pasta:
-  name: vegetarian Pasta
+  name: Vegetarian Pasta
   image_url: veg_pasta.jpg
   price: 9.99
   cuisine_type: Italian
