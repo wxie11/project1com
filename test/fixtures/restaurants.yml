@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  address: MyString
-  phone: MyString
+noodle_house:
+  name: Noodle House
+  address: 754 S State St
+  phone: 312-752-7854
 
-two:
-  name: MyString
-  address: MyString
-  phone: MyString
+ajida:
+  name: Ajida
+  address: 201 N Wells St
+  phone: 312-332-6878
