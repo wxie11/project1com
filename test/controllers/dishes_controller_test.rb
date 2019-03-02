@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DishesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @dish = dishes(:one)
+    @dish = dishes(:veg_pasta)
   end
 
   test "should get index" do
@@ -17,7 +17,7 @@ class DishesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create dish" do
     assert_difference('Dish.count') do
-      post dishes_url, params: { dish: {  } }
+      post dishes_url, params: { dish: { } }
     end
 
     assert_redirected_to dish_url(Dish.last)
