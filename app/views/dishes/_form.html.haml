@@ -5,6 +5,19 @@
       %ul
         - @dish.errors.full_messages.each do |message|
           %li= message
+  %ol.inputs
+    %li
+      = f.label :name
+      = f.text_field :name
+    %li
+      = f.label :price
+      = f.text_field :price
+    %li
+      = f.label :cuisine_type
+      = f.text_area :cuisine_type
+    %li
+      = f.label :image_url
+      = f.text_area :image_url
 
   .actions
     = f.submit 'Save'

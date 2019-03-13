@@ -2,6 +2,7 @@
 
 = render 'form'
 
-= link_to 'Show', @dish
-\|
-= link_to 'Back', dishes_path
+%footer
+  %ul.controls
+    %li= link_to 'Back', dishes_path
+    %li= link_to 'Show', @dish
