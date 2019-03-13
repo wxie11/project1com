@@ -7,10 +7,13 @@
     %li
       %article
         %h3= link_to dish.name, dish
-        %p.byline= dish.restaurant_name
-        = dish.price
-        = dish.cuisine_type
-        = image_tag(dish.image_url)
+        %ul.info
+          %li= dish.restaurant_name
+          %li= dish.restaurant.phone
+          %li= dish.restaurant.address
+          %li= dish.price
+          %li= dish.cuisine_type
+          %li= image_tag(dish.image_url)
         %ul.controls
           %li= link_to 'Edit', edit_dish_path(dish)
           %li= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' }
