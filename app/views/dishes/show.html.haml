@@ -4,8 +4,8 @@
   %h3= @dish.name
   %p.byline= @dish.restaurant_name
   = @dish.price
-  = @dish.image_url
   = @dish.cuisine_type
+  = image_tag(@dish.image_url)
   %ul.controls
     %li= link_to 'Edit', edit_dish_path(@dish)
     %li= link_to 'Destroy', @dish, method: :delete, data: { confirm: 'Are you sure?' }
