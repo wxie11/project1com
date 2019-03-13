@@ -11,7 +11,7 @@
           %li= dish.restaurant_name
           %li= dish.restaurant.phone
           %li= dish.restaurant.address
-          %li= dish.price
+          %li= number_to_currency(dish.price)
           %li= dish.cuisine_type
           %li= image_tag(dish.image_url)
         %ul.controls
