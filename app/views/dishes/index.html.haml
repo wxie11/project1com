@@ -1,19 +1,16 @@
-%h1 Listing dishes
+%header
+  %h2 Favorite Dishes
+  %p= link_to 'New Dish', new_dish_path
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @dishes.each do |dish|
-      %tr
-        %td= link_to 'Show', dish
-        %td= link_to 'Edit', edit_dish_path(dish)
-        %td= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Dish', new_dish_path
+%ul.dishes
+  - @dishes.each do |dish|
+    %li
+      %article
+        %h3= link_to dish.name, dish
+        %p.byline= dish.restaurant.name
+        = dish.price
+        = dish.image_url
+        = dish.cuisine_type
+        %ul.controls
+          %li= link_to 'Edit', edit_dish_path(dish)
+          %li= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' }
