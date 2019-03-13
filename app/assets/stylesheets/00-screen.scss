@@ -8,8 +8,28 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Begin site styles below */
 
-/* Base Styles (HTML Selectors) */
+// Site-wide variables
+$primary_color: pink;
+$base_font_size: 20px;
+// Site-wide functions
+@function px-to-em($target,$context:$base_font_size) {
+  @return ($target / $context) * 1em;
+}
 
+//@function typographic_scale($ratio,$interval,$base:$base_font_size) {
+//  @return $base * ($ratio  $interval) * 1px;
+//}
+
+/* Base Styles (HTML Selectors) */
+html {
+  font-size: px-to-em($base_font_size,16px);
+  color: $primary_color;
+  line-height: px-to-em(24px);
+}
+h1 {
+  font-size: px-to-em(45px);
+  line-height: px-to-em(48px,45px);
+}
 /* Layout Styles (Usually Landmark ID Selectors) */
 
 /* Modular Styles (Repeating Class Selectors) */
