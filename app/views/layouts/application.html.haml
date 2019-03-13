@@ -1,11 +1,18 @@
 !!!
-%html
+%html{lang: "en"}
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Project1com
+    %meta{charset: "UTF-8"}
+    %title My Secret Menu
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1.0,shrink-to-fit=no"}
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header#header
+      %h1 My Secret Menu
+      %p.tagline The most personalize menu ever.
     = yield
+
+    %footer#footer
+      %small Site desgin by a food lover. All right reserved.
