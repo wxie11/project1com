@@ -8,4 +8,13 @@ class RestaurantTest < ActiveSupport::TestCase
     assert restaurant.errors[:address].any?
     assert restaurant.errors[:phone].any?
   end
+
+  test "phone number must in the correct format" do
+    @ajida = restaurants(:ajida)
+    @ajida.phone = "123-234-2345"
+    assert @ajida.valid?
+
+    @ajida.phone = "(312)754-5566"
+    assert @ajida.invalid?
+  end
 end
