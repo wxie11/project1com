@@ -1,6 +1,14 @@
 %p#notice= notice
 
+%article
+  %h3= @dish.name
+  %p.byline= @dish.restaurant.name
+  = @dish.price
+  = @dish.image_url
+  = @dish.cuisine_type
+  %ul.controls
+    %li= link_to 'Edit', edit_dish_path(@dish)
+    %li= link_to 'Destroy', @dish, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'Edit', edit_dish_path(@dish)
-\|
-= link_to 'Back', dishes_path
+%footer
+  =link_to 'Back', dishes_path
