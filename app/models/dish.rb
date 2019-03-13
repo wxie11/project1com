@@ -6,4 +6,13 @@ class Dish < ApplicationRecord
   validates :image_url, allow_blank: true, format: {
     with: %r{\.(jpg|png)\Z}i,
     message: 'Image must be in either JPG or PNG format.'}
+
+  def restaurant_name=(name)
+    self.restaurant = Restaurant.find_or_create_by(name: name)
+  end
+
+  def restaurant_name
+    self.restaurant ? self.restaurant.name : nil
+  end
+
 end

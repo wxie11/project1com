@@ -43,4 +43,16 @@ class DishTest < ActiveSupport::TestCase
     assert @curry_rice.invalid?
   end
 
+  test "post responds to restaurant_name getter" do
+    @dish = dishes(:veg_pasta)
+    assert_equal @dish.restaurant_name, dishes(:veg_pasta).restaurant.name
+  end
+
+  test "post responses to restaurant_name setter" do
+    @dish = dishes(:veg_pasta)
+    @dish.restaurant_name = restaurants(:noodle_house).name
+    @dish.save
+    assert_equal @dish.restaurant_name, restaurants(:noodle_house).name
+  end
+
 end
