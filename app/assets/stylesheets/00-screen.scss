@@ -153,3 +153,17 @@ input[type="submit"]:hover {
     padding-right: px-to-em(25px);
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .dishes li {
+    display: inline-block;
+    width: 33.333333333%;
+  }
+  article.show {
+    padding-left: px-to-em(50px);
+    padding-right: px-to-em(50px);
+  }
+  article.show img {
+    width: 50%;
+  }
+}
