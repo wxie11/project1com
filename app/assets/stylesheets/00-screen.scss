@@ -124,10 +124,16 @@ input[type="submit"]:hover {
 
 /* State Styles (Javascript-Dependent Styles, Meida Queries) */
 @media screen and (min-width: 768px) {
+  article.listlineodd{
+    border-radius: 0;
+    background:none;
+  }
   .dishes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-radius: px-to-em(25px);
+    background-color: rgba(255,255,255,0.72);
   }
   .dishes li {
     display: inline-block;
