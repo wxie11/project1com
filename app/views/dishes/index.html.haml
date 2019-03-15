@@ -5,15 +5,10 @@
 %ul.dishes
   - @dishes.each do |dish|
     %li
-      %article
+      %article{ class: cycle('listlineodd', 'listlineeven') }
         %h3= link_to dish.name, dish
         %ul.info
-          %li= dish.restaurant_name
-          %li= dish.restaurant.phone
-          %li= dish.restaurant.address
+          %li= image_tag(dish.image_url)
           %li= number_to_currency(dish.price)
           %li= dish.cuisine_type
-          %li= image_tag(dish.image_url)
-        %ul.controls
-          %li= link_to 'Edit', edit_dish_path(dish)
-          %li= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' }
+          %li= dish.restaurant_name

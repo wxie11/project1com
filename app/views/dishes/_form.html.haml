@@ -1,7 +1,7 @@
 = form_for @dish do |f|
   - if @dish.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@dish.errors.count, "error")} prohibited this dish from being saved:"
+      %h3= "#{pluralize(@dish.errors.count, "error")} prohibited this dish from being saved:"
       %ul
         - @dish.errors.full_messages.each do |message|
           %li= message
@@ -14,13 +14,12 @@
       = f.text_field :price
     %li
       = f.label :cuisine_type
-      = f.text_area :cuisine_type
+      = f.text_field :cuisine_type
     %li
       = f.label :image_url
-      = f.text_area :image_url
+      = f.text_field :image_url
     %li
       = f.label :restaurant_name
-      = f.text_area :restaurant_name
-
-  .actions
-    = f.submit 'Save'
+      = f.text_field :restaurant_name
+    %li
+      = f.submit 'Save'

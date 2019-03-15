@@ -9,7 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Begin site styles below */
 
 // Site-wide variables
-$primary_color: pink;
+$primary_color: #414141;
 $base_font_size: 20px;
 // Site-wide functions
 @function px-to-em($target,$context:$base_font_size) {
@@ -23,15 +23,102 @@ $base_font_size: 20px;
 /* Base Styles (HTML Selectors) */
 html {
   font-size: px-to-em($base_font_size,16px);
+  font-family: "Book Antiqua", garamond, "Times New Roman", Helvetica, Arial, sans-serif;
   color: $primary_color;
   line-height: px-to-em(24px);
+  margin: px-to-em(20px);
+  background-color: #FFF7C0;
 }
 h1 {
+  text-align: center;
   font-size: px-to-em(45px);
   line-height: px-to-em(48px,45px);
 }
-/* Layout Styles (Usually Landmark ID Selectors) */
+h2 {
+  padding-top: px-to-em(15px);
+  padding-bottom: px-to-em(15px);
+  font-size: px-to-em(30px);
+}
+h3 {
+  color: #66AB8C;
+  font-weight: bold;
+  padding-bottom: px-to-em(5px);
+}
+article {
+  padding: px-to-em(10px);
+}
+article.listlineodd{
+  border-radius: px-to-em(25px);
+  background-color: rgba(255,255,255,0.72);
+}
+article.show {
+  padding-left: 0;
+  padding-right: 0;
+}
+p {
+  padding-bottom: px-to-em(15px);
+}
+img {
+  width: 100%;
+}
+a {
+  color: #66AB8C;
+  text-decoration: none;
+}
+.controls li {
+  margin-bottom: px-to-em(15px);
+  margin-top: px-to-em(15px);
+}
+input {
+  display: block;
+  border: none;
+  line-height: 1;
+  height: px-to-em(60px);
+  padding: 0.718em;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  color: white;
+  font-size: px-to-em(20px);
+  font-family: inherit;
+  cursor: pointer;
+  background-color: rgba(102,171,140,0.72);
+  margin-top: px-to-em(20px);
+}
+.controls a,
+p a {
+  color: white;
+  background-color: rgba(102,171,140,0.72);
+  border-radius: 0.345em;
+  padding: 0.345em 0.5em;
+}
+.controls a:hover,
+p a:hover,
+input[type="submit"]:hover {
+  background-color: rgba(255,255,255,0.72);
+  color: #66AB8C;
+}
 
+/* Layout Styles (Usually Landmark ID Selectors) */
+#show {
+  padding-top: px-to-em(15px);
+}
+.tagline {
+  text-align: center;
+  font-style: italic;
+}
+#error_explanation {
+  background-color: rgba(255,255,255,0.72);
+  border-radius: 0.345em;
+  padding: 0.345em 0.5em;
+  color: red;
+}
+#error_explanation li {
+  list-style: square;
+  list-style-position: inside;
+}
 /* Modular Styles (Repeating Class Selectors) */
 
 /* State Styles (Javascript-Dependent Styles, Meida Queries) */

@@ -1,17 +1,18 @@
 %p#notice= notice
 
-%article
-  %h3= @dish.name
+%article.show
+  %h3#show= @dish.name
   %ul.info
+    %li= image_tag(@dish.image_url)
+    %li= number_to_currency(@dish.price)
+    %li= @dish.cuisine_type
     %li= @dish.restaurant_name
     %li= @dish.restaurant.phone
     %li= @dish.restaurant.address
-    %li= number_to_currency(@dish.price)
-    %li= @dish.cuisine_type
-    %li= image_tag(@dish.image_url)
   %ul.controls
     %li= link_to 'Edit', edit_dish_path(@dish)
     %li= link_to 'Destroy', @dish, method: :delete, data: { confirm: 'Are you sure?' }
 
 %footer
-  =link_to 'Back', dishes_path
+  %ul.controls
+    %li= link_to 'Back', dishes_path
