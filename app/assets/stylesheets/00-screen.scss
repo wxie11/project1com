@@ -47,6 +47,7 @@ h3 {
 article {
   padding: px-to-em(10px);
 }
+article.show,
 article.listlineodd{
   border-radius: px-to-em(25px);
   background-color: rgba(255,255,255,0.72);
@@ -100,10 +101,12 @@ input[type="submit"]:hover {
   background-color: rgba(255,255,255,0.72);
   color: #66AB8C;
 }
-
 /* Layout Styles (Usually Landmark ID Selectors) */
 #show {
   padding-top: px-to-em(15px);
+}
+#notice {
+  color: #66AB8C;
 }
 .tagline {
   text-align: center;
@@ -138,5 +141,9 @@ input[type="submit"]:hover {
   .dishes li {
     display: inline-block;
     width: 50%;
+  }
+  article.show {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
