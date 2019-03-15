@@ -6,9 +6,12 @@
   - @dishes.each do |dish|
     %li
       %article{ class: cycle('listlineodd', 'listlineeven') }
+        %section
         %h3= link_to dish.name, dish
+        =image_tag(dish.image_url)
+        %section
         %ul.info
-          %li= image_tag(dish.image_url)
+          //%li= image_tag(dish.image_url)
           %li= number_to_currency(dish.price)
           %li= dish.cuisine_type
           %li= dish.restaurant_name

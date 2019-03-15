@@ -119,6 +119,18 @@ input[type="submit"]:hover {
   list-style: square;
   list-style-position: inside;
 }
+
 /* Modular Styles (Repeating Class Selectors) */
 
 /* State Styles (Javascript-Dependent Styles, Meida Queries) */
+@media screen and (min-width: 768px) {
+  .dishes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .dishes li {
+    display: inline-block;
+    width: 50%;
+  }
+}
