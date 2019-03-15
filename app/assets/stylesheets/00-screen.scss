@@ -53,8 +53,8 @@ article.listlineodd{
   background-color: rgba(255,255,255,0.72);
 }
 article.show {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: px-to-em(10px);
+  padding-right: px-to-em(10px);
 }
 p {
   padding-bottom: px-to-em(15px);
@@ -66,9 +66,14 @@ a {
   color: #66AB8C;
   text-decoration: none;
 }
+.controls {
+  display: flex;
+  flex-direction: row;
+}
 .controls li {
   margin-bottom: px-to-em(15px);
   margin-top: px-to-em(15px);
+  margin-right: px-to-em(15px);
 }
 input {
   display: block;
@@ -101,6 +106,7 @@ input[type="submit"]:hover {
   background-color: rgba(255,255,255,0.72);
   color: #66AB8C;
 }
+
 /* Layout Styles (Usually Landmark ID Selectors) */
 #show {
   padding-top: px-to-em(15px);
@@ -143,7 +149,7 @@ input[type="submit"]:hover {
     width: 50%;
   }
   article.show {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: px-to-em(25px);
+    padding-right: px-to-em(25px);
   }
 }
