@@ -22,6 +22,7 @@ Restaurant.destroy_all
   phone: '312-332-6878'
 )
 
+
 Dish.create(
   [
     {name: 'Vegetarian Pasta', image_url: 'veg_pasta.jpg', price: 9.99, cuisine_type: 'Italian', restaurant: @noodle_house},

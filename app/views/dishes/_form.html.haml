@@ -8,7 +8,7 @@
   %ol.inputs
     %li
       = f.label :name
-      = f.text_field :name
+      = f.text_field :name, placeholder: "Chicken Salad"
     %li
       = f.label :price
       = f.text_field :price
@@ -17,9 +17,9 @@
       = f.text_field :cuisine_type
     %li
       = f.label :image_url
-      = f.text_field :image_url
+      = f.text_field :image_url, placeholder: "chicken_salad.jpg"
     %li
       = f.label :restaurant_name
-      = f.text_field :restaurant_name
+      = f.text_field :restaurant_name, placeholder: "Ajida"
     %li
       = f.submit 'Save'
