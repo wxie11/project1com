@@ -15,9 +15,9 @@ class DishesTest < ApplicationSystemTestCase
     click_on "New Dish"
 
     fill_in "Name", with: @dish.name
-    fill_in "Image url", with: @dish.image_url
     fill_in "Price", with: @dish.price
     fill_in "Cuisine type", with: @dish.cuisine_type
+    fill_in "Image url", with: @dish.image_url
     fill_in "Restaurant", with: @dish.restaurant_name
 
     click_on "Save"
@@ -31,11 +31,10 @@ class DishesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Name", with: @dish.name
-    fill_in "Image url", with: @dish.image_url
     fill_in "Price", with: @dish.price
     fill_in "Cuisine type", with: @dish.cuisine_type
+    fill_in "Image url", with: @dish.image_url
     fill_in "Restaurant", with: @dish.restaurant_name
-
     click_on "Save"
 
     assert_text "Dish was successfully updated"
