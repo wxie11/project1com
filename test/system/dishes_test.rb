@@ -14,7 +14,7 @@ class DishesTest < ApplicationSystemTestCase
     visit dishes_url
     click_on "New Dish"
 
-    fill_in "Name", with: @dish.name
+    fill_in "Name", with: "Yummy"
     fill_in "Price", with: @dish.price
     fill_in "Cuisine type", with: @dish.cuisine_type
     fill_in "Image url", with: @dish.image_url
